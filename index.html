@@ -6,12 +6,16 @@
     <title>FLAP Token</title>
     <style>
         /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
             background-color: #121212;
             color: #fff;
+            overflow-x: hidden;
         }
         a {
             text-decoration: none;
@@ -23,16 +27,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
+            padding: 15px 20px;
             background-color: rgba(0, 0, 0, 0.8);
             position: sticky;
             top: 0;
             z-index: 10;
+            width: 100%;
         }
         .navbar a {
             color: #ffcc00;
             font-weight: bold;
             margin: 0 15px;
+            transition: color 0.3s;
         }
         .navbar a:hover {
             color: #ff9900;
@@ -41,35 +47,37 @@
         /* Header */
         header {
             background: url('banner.jpg') no-repeat center center/cover;
-            height: 500px;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            position: relative;
-            color: white;
         }
         header img {
             max-width: 100px;
             margin-bottom: 20px;
         }
         header h1 {
-            font-size: 3em;
+            font-size: 3rem;
             text-shadow: 2px 2px 5px #000;
         }
         header p {
-            font-size: 1.5em;
+            font-size: 1.2rem;
             margin: 10px 0;
             text-shadow: 1px 1px 3px #000;
+        }
+        .header-buttons {
+            margin-top: 20px;
         }
         .header-buttons a {
             background-color: #ffcc00;
             color: #121212;
-            padding: 15px 25px;
-            margin: 10px;
+            padding: 15px 20px;
             border-radius: 5px;
             font-weight: bold;
+            margin: 5px;
+            display: inline-block;
             transition: all 0.3s ease;
         }
         .header-buttons a:hover {
@@ -78,18 +86,27 @@
 
         /* Section */
         .section {
-            padding: 40px 20px;
+            padding: 30px 20px;
             margin: 20px auto;
-            width: 90%;
-            max-width: 1200px;
-            background: #1c1c1c;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            max-width: 100%;
+            text-align: center;
         }
         .section h2 {
-            text-align: center;
-            margin-bottom: 20px;
             color: #ffcc00;
+            margin-bottom: 15px;
+        }
+        .section p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .section-card {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
         }
 
         /* Footer */
@@ -98,6 +115,29 @@
             text-align: center;
             padding: 20px 0;
             color: #ffcc00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .header-buttons a {
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .header-buttons a {
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
+            .navbar {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -124,13 +164,13 @@
     </header>
 
     <!-- About Section -->
-    <div id="about" class="section">
+    <div id="about" class="section section-card">
         <h2>About FLAP</h2>
         <p>FLAP Token powers a unique Flappy Bird-inspired play-to-earn game. Earn rewards, enjoy NFTs, and explore exciting tokenomics.</p>
     </div>
 
     <!-- Tokenomics Section -->
-    <div id="tokenomics" class="section">
+    <div id="tokenomics" class="section section-card">
         <h2>Tokenomics</h2>
         <p><strong>Total Supply:</strong> 1 Trillion<br>
         <strong>Features:</strong> Auto-burn, Holder Rewards, Staking, and NFTs.</p>
