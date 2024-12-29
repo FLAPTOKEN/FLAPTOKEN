@@ -133,6 +133,48 @@
             transform: scale(1.05);
         }
 
+        /* Section */
+        .section {
+            padding: 50px 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        .section h2 {
+            color: #e7d610;
+            font-size: 24px;
+            text-shadow: 2px 2px #000;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .section ul {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 600px;
+            font-size: 14px;
+            line-height: 1.8;
+            list-style-type: square;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Social Links Styling */
+        .social-links a {
+            color: #e7d610;
+            font-size: 16px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #d4c10e;
+        }
+
         /* Footer */
         footer {
             background-color: #222;
@@ -176,18 +218,16 @@
         </div>
     </header>
 
-
     <!-- About Section -->
-    <div id="about" class="section section-card">
+    <div id="about" class="section">
         <h2>About FLAP Token</h2>
         <p>FLAP Token is the cornerstone of a revolutionary play-to-earn ecosystem inspired by the simplicity and nostalgia of Flappy Bird.</p>
     </div>
 
     <!-- Tokenomics Section -->
-    <div id="tokenomics" class="section section-card">
+    <div id="tokenomics" class="section">
         <h2>Tokenomics</h2>
         <p><strong>Platform:</strong> Solana</p>
-        <p><strong>Key Features:</strong></p>
         <ul>
             <li>Lightning-fast transactions powered by Solana</li>
             <li>Ultra-low transaction fees</li>
@@ -203,7 +243,7 @@
     </div>
 
     <!-- Roadmap Section -->
-    <div id="roadmap" class="section section-card">
+    <div id="roadmap" class="section">
         <h2>Roadmap</h2>
         <ul>
             <li><strong>Q4 2024:</strong> Launch of the FLAP Game Bot</li>
@@ -214,27 +254,29 @@
     </div>
 
     <!-- FAQs Section -->
-    <div id="faq" class="section section-card">
+    <div id="faq" class="section">
         <h2>FAQs</h2>
         <p><strong>What is FLAP Token?</strong><br>A gaming-focused token built on Solana for a play-to-earn ecosystem.</p>
-        <p><strong>How to earn?</strong><br>Play the FLAP Game Bot on Telegram.</p>
+        <p><strong>How can I earn?</strong><br>Play the FLAP Game Bot on Telegram.</p>
     </div>
 
-    <!-- Socials Section -->
-    <div id="socials" class="section section-card">
+    <!-- Social Links Section -->
+    <div id="socials" class="section">
         <h2>Join Our Community</h2>
-        <p>
-            <a href="https://t.me/FlapToken" target="_blank"><i class="fab fa-telegram"></i> Telegram</a> |
+        <div class="social-links">
+            <a href="https://t.me/FlapToken" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
             <a href="https://x.com/FlapToken" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-        </p>
+        </div>
     </div>
 
     <!-- Latest News Section -->
-    <div id="news" class="section section-card">
+    <div id="news" class="section">
         <h2>Latest News</h2>
-        <p><strong>Dec 29, 2024:</strong> The FLAP Token website received a major update!</p>
-        <p><strong>Oct 1, 2024:</strong> FLAP Game Bot beta testing begins.</p>
-        <p><strong>Aug 15, 2024:</strong> Partnership with a leading NFT platform announced.</p>
+        <ul>
+            <li><strong>Dec 29, 2024:</strong> The FLAP Token website received a major update!</li>
+            <li><strong>Oct 1, 2024:</strong> FLAP Game Bot beta testing begins.</li>
+            <li><strong>Aug 15, 2024:</strong> Partnership with a leading NFT platform announced.</li>
+        </ul>
     </div>
 
     <!-- Footer -->
