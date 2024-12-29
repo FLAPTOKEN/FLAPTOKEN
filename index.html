@@ -15,8 +15,19 @@
         header {
             background-color: #ffcc00;
             color: white;
-            padding: 20px 10px;
+            padding: 10px;
             text-align: center;
+        }
+        header img {
+            max-width: 150px;
+        }
+        .banner {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .banner img {
+            max-width: 100%;
+            height: auto;
         }
         section {
             padding: 20px;
@@ -32,6 +43,23 @@
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .social-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
         }
         footer {
             background-color: #333;
@@ -39,27 +67,50 @@
             text-align: center;
             padding: 10px 0;
         }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="FLAP Logo">
         <h1>Welcome to FLAP Token</h1>
         <p>The future of play-to-earn gaming and blockchain innovation.</p>
     </header>
+
+    <div class="banner">
+        <img src="banner.jpg" alt="FLAP Banner">
+    </div>
+
     <section>
         <h2>About FLAP</h2>
         <p>FLAP Token powers a unique Flappy Bird-inspired play-to-earn game. Earn rewards, enjoy NFTs, and explore exciting tokenomics.</p>
     </section>
+
     <section>
         <h2>Tokenomics</h2>
         <p><strong>Total Supply:</strong> 1 Trillion<br>
         <strong>Features:</strong> Auto-burn, Holder Rewards, Staking, and NFTs.</p>
     </section>
+
     <section class="cta">
-        <a href="#">Play Now</a>
+        <a href="https://flaptoken.github.io/FLAPTOKEN/play.html" target="_blank">Play Now</a>
     </section>
+
+    <div class="social-links">
+        <h2>Follow Us</h2>
+        <a href="https://t.me/FlapToken" target="_blank">
+            <img src="telegram-icon.png" alt="Telegram"> Telegram
+        </a>
+        <a href="https://x.com/FlapToken" target="_blank">
+            <img src="twitter-icon.png" alt="Twitter"> Twitter
+        </a>
+    </div>
+
     <footer>
-        <p>© 2024 FLAP Token | <a href="https://t.me/FlapToken" style="color: yellow;">Join Telegram</a></p>
+        <p>© 2024 FLAP Token | <a href="https://t.me/FlapToken">Join Telegram</a></p>
     </footer>
 </body>
 </html>
