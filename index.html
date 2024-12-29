@@ -34,14 +34,50 @@
             z-index: 10;
             width: 100%;
         }
-        .navbar a {
+        .navbar .logo img {
+            max-width: 50px;
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .menu a {
             color: #ffcc00;
             font-weight: bold;
-            margin: 0 15px;
             transition: color 0.3s;
         }
-        .navbar a:hover {
+        .navbar .menu a:hover {
             color: #ff9900;
+        }
+        .navbar .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .navbar .hamburger span {
+            width: 30px;
+            height: 3px;
+            background-color: #ffcc00;
+        }
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: rgba(0, 0, 0, 0.9);
+                border-radius: 8px;
+                padding: 10px 20px;
+                gap: 10px;
+            }
+            .navbar .hamburger {
+                display: flex;
+            }
+            .navbar.active .menu {
+                display: flex;
+            }
         }
 
         /* Header */
@@ -116,39 +152,26 @@
             padding: 20px 0;
             color: #ffcc00;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            .header-buttons a {
-                padding: 10px 15px;
-                font-size: 1rem;
-            }
-        }
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            .header-buttons a {
-                padding: 8px 10px;
-                font-size: 0.9rem;
-            }
-            .navbar {
-                flex-direction: column;
-            }
-        }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
     <div class="navbar">
-        <a href="#about">About</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#play-now">Play Now</a>
-        <a href="#socials">Socials</a>
+        <div class="logo">
+            <a href="#home"><img src="FLAPLogo.png" alt="FLAP Logo" /></a>
+        </div>
+        <div class="menu">
+            <a href="#about">About</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#play-now">Play Now</a>
+            <a href="#socials">Socials</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
     <!-- Header -->
@@ -163,40 +186,30 @@
         </div>
     </header>
 
-   <!-- About Section -->
-<div id="about" class="section section-card">
-    <h2>About FLAP Token</h2>
-    <p>FLAP Token is more than just a cryptocurrency—it's the cornerstone of a revolutionary play-to-earn ecosystem inspired by the simplicity and nostalgia of Flappy Bird. Built on the fast and scalable Solana blockchain, FLAP Token aims to bridge the gap between casual gaming and cutting-edge blockchain technology.</p>
-    <p>Our mission is to empower gamers, investors, and enthusiasts by creating a vibrant ecosystem where entertainment and financial opportunities converge. With ultra-low transaction fees and near-instant speeds, FLAP Token is designed to deliver seamless interactions within games, marketplaces, and beyond.</p>
-    <p>As the foundation of a dynamic gaming universe, FLAP Token will enable exciting features like staking rewards, NFT collectibles, and cross-chain compatibility, unlocking limitless possibilities for our growing community.</p>
-</div>
+    <!-- About Section -->
+    <div id="about" class="section section-card">
+        <h2>About FLAP Token</h2>
+        <p>FLAP Token is more than just a cryptocurrency—it's the cornerstone of a revolutionary play-to-earn ecosystem inspired by the simplicity and nostalgia of Flappy Bird. Built on the fast and scalable Solana blockchain, FLAP Token aims to bridge the gap between casual gaming and cutting-edge blockchain technology.</p>
+        <p>Our mission is to empower gamers, investors, and enthusiasts by creating a vibrant ecosystem where entertainment and financial opportunities converge.</p>
+    </div>
 
-   <!-- Tokenomics Section -->
-<div id="tokenomics" class="section section-card">
-    <h2>Tokenomics</h2>
-    <p><strong>Platform:</strong> Solana</p>
-    <p><strong>Key Features:</strong></p>
-    <ul>
-        <li>Lightning-fast and scalable blockchain transactions</li>
-        <li>Ultra-low transaction fees for trading and transfers</li>
-        <li>Environmentally friendly blockchain technology</li>
-    </ul>
-    <p><strong>Future Plans:</strong></p>
-    <ul>
-        <li>Integration with play-to-earn gaming mechanics</li>
-        <li>Staking to reward long-term holders</li>
-        <li>Exclusive NFT collections for the FLAP ecosystem</li>
-        <li>Expanding to cross-chain compatibility</li>
-    </ul>
-</div>
-
-    <!-- Social Links -->
-    <div id="socials" class="section">
-        <h2>Follow Us</h2>
-        <p>
-            <a href="https://t.me/FlapToken" target="_blank">Telegram</a> | 
-            <a href="https://x.com/FlapToken" target="_blank">Twitter</a>
-        </p>
+    <!-- Tokenomics Section -->
+    <div id="tokenomics" class="section section-card">
+        <h2>Tokenomics</h2>
+        <p><strong>Platform:</strong> Solana</p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Lightning-fast transactions powered by Solana</li>
+            <li>Ultra-low transaction fees</li>
+            <li>Environmentally friendly blockchain technology</li>
+        </ul>
+        <p><strong>Future Plans:</strong></p>
+        <ul>
+            <li>Integration with play-to-earn gaming mechanics</li>
+            <li>Staking to reward long-term holders</li>
+            <li>Exclusive NFT collections</li>
+            <li>Expanding to cross-chain compatibility</li>
+        </ul>
     </div>
 
     <!-- Footer -->
@@ -204,5 +217,14 @@
         <p>© 2024 FLAP Token | <a href="https://t.me/FlapToken">Join Telegram</a></p>
     </footer>
 
+    <script>
+        // JavaScript for Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navbar = document.querySelector('.navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
