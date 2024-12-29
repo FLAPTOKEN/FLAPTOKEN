@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLAP Token</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         /* General Styles */
         * {
@@ -12,7 +14,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Press Start 2P', cursive;
             background-color: #121212;
             color: #fff;
             overflow-x: hidden;
@@ -33,6 +35,7 @@
             top: 0;
             z-index: 10;
             width: 100%;
+            border-bottom: 4px solid #ffcc00;
         }
         .navbar .logo img {
             max-width: 50px;
@@ -43,7 +46,7 @@
         }
         .navbar .menu a {
             color: #ffcc00;
-            font-weight: bold;
+            font-size: 12px;
             transition: color 0.3s;
         }
         .navbar .menu a:hover {
@@ -89,35 +92,38 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            border-bottom: 4px solid #ffcc00;
         }
         header img {
-            max-width: 100px;
+            max-width: 120px;
             margin-bottom: 20px;
         }
         header h1 {
-            font-size: 3rem;
-            text-shadow: 2px 2px 5px #000;
+            font-size: 24px;
+            text-shadow: 2px 2px #ffcc00;
         }
         header p {
-            font-size: 1.2rem;
+            font-size: 14px;
             margin: 10px 0;
-            text-shadow: 1px 1px 3px #000;
+            text-shadow: 1px 1px #ffcc00;
         }
         .header-buttons {
             margin-top: 20px;
         }
         .header-buttons a {
             background-color: #ffcc00;
-            color: #121212;
-            padding: 15px 20px;
+            color: #000;
+            padding: 10px 15px;
             border-radius: 5px;
-            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
             margin: 5px;
             display: inline-block;
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease, background-color 0.3s ease;
         }
         .header-buttons a:hover {
             background-color: #ff9900;
+            transform: scale(1.1);
         }
 
         /* Section */
@@ -126,31 +132,45 @@
             margin: 20px auto;
             max-width: 100%;
             text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .section h2 {
             color: #ffcc00;
             margin-bottom: 15px;
+            text-shadow: 2px 2px #000;
         }
         .section p {
-            font-size: 1rem;
+            font-size: 12px;
             line-height: 1.5;
         }
         .section-card {
-            background-color: #1c1c1c;
+            background-color: #222;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
             margin: 20px auto;
             width: 90%;
             max-width: 800px;
+            border: 4px solid #ffcc00;
         }
 
         /* Footer */
         footer {
-            background-color: #000;
+            background-color: #222;
             text-align: center;
             padding: 20px 0;
             color: #ffcc00;
+            border-top: 4px solid #ffcc00;
         }
     </style>
 </head>
@@ -175,92 +195,52 @@
         </div>
     </div>
 
-  <!-- Header -->
-<header>
-    <img src="FLAPLogo.png" alt="FLAP Logo">
-    <h1>FLAP Token</h1>
-    <p>The future of play-to-earn gaming and blockchain innovation.</p>
-    <div class="header-buttons">
-        <a href="https://t.me/FLAPGameBot" target="_blank">Play Now</a>
-        <a href="https://t.me/FlapToken" target="_blank">Join Telegram</a>
-        <a href="https://x.com/FlapToken" target="_blank">Follow on Twitter</a>
-    </div>
-</header>
-
+    <!-- Header -->
+    <header>
+        <img src="FLAPLogo.png" alt="FLAP Logo">
+        <h1>FLAP Token</h1>
+        <p>The future of play-to-earn gaming and blockchain innovation.</p>
+        <div class="header-buttons">
+            <a href="https://t.me/FLAPGameBot" target="_blank">Play Now</a>
+            <a href="https://t.me/FlapToken" target="_blank"><i class="fab fa-telegram"></i> Join Telegram</a>
+            <a href="https://x.com/FlapToken" target="_blank"><i class="fab fa-twitter"></i> Follow on Twitter</a>
+        </div>
+    </header>
 
     <!-- About Section -->
     <div id="about" class="section section-card">
         <h2>About FLAP Token</h2>
-        <p>FLAP Token is more than just a cryptocurrency—it's the cornerstone of a revolutionary play-to-earn ecosystem inspired by the simplicity and nostalgia of Flappy Bird. Built on the fast and scalable Solana blockchain, FLAP Token aims to bridge the gap between casual gaming and cutting-edge blockchain technology.</p>
-        <p>Our mission is to empower gamers, investors, and enthusiasts by creating a vibrant ecosystem where entertainment and financial opportunities converge.</p>
+        <p>FLAP Token is the cornerstone of a revolutionary play-to-earn ecosystem inspired by the simplicity and nostalgia of Flappy Bird.</p>
     </div>
 
-    <!-- Tokenomics Section -->
-    <div id="tokenomics" class="section section-card">
-        <h2>Tokenomics</h2>
-        <p><strong>Platform:</strong> Solana</p>
-        <p><strong>Key Features:</strong></p>
+    <!-- Roadmap Section -->
+    <div id="roadmap" class="section section-card">
+        <h2>Roadmap</h2>
         <ul>
-            <li>Lightning-fast transactions powered by Solana</li>
-            <li>Ultra-low transaction fees</li>
-            <li>Environmentally friendly blockchain technology</li>
-        </ul>
-        <p><strong>Future Plans:</strong></p>
-        <ul>
-            <li>Integration with play-to-earn gaming mechanics</li>
-            <li>Staking to reward long-term holders</li>
-            <li>Exclusive NFT collections</li>
-            <li>Expanding to cross-chain compatibility</li>
+            <li><strong>Q4 2024:</strong> Launch of the FLAP Game Bot</li>
+            <li><strong>Q1 2025:</strong> Staking feature integration</li>
+            <li><strong>Q2 2025:</strong> NFT marketplace launch</li>
+            <li><strong>Q3 2025:</strong> Cross-chain compatibility</li>
         </ul>
     </div>
-
- <div id="roadmap" class="section section-card">
-    <h2>Roadmap</h2>
-    <ul>
-        <li><strong>Q4 2024:</strong> Official launch of the FLAP Token play-to-earn game and community rewards program</li>
-        <li><strong>Q1 2025:</strong> Staking feature integration for long-term holders</li>
-        <li><strong>Q2 2025:</strong> Release of exclusive NFT collections tied to the FLAP ecosystem</li>
-        <li><strong>Q3 2025:</strong> Expansion to cross-chain compatibility and decentralized exchanges</li>
-    </ul>
-</div>
-
 
     <!-- FAQ Section -->
     <div id="faq" class="section section-card">
         <h2>FAQs</h2>
-        <p><strong>What is FLAP Token?</strong><br>FLAP Token is a cryptocurrency built on Solana, designed for play-to-earn gaming and blockchain innovation.</p>
-        <p><strong>How can I earn FLAP Token?</strong><br>Play our FlappyBird-inspired game and earn rewards directly to your wallet.</p>
-        <p><strong>When will staking and NFTs be available?</strong><br>These features are part of our roadmap and will launch in Q3 and Q4 2024, respectively.</p>
+        <p><strong>What is FLAP Token?</strong><br>A gaming-focused token built on Solana for a play-to-earn ecosystem.</p>
+        <p><strong>How to earn?</strong><br>Play the FLAP Game Bot on Telegram.</p>
     </div>
-
-    <!-- Testimonials Section -->
-    <div id="testimonials" class="section section-card">
-        <h2>What Our Community Says</h2>
-        <p><em>"FLAP Token is a game-changer! I’ve never had so much fun earning crypto while playing."</em> - Gamer123</p>
-        <p><em>"Excited to see how this project evolves. The team is doing an amazing job!"</em> - CryptoFanatic</p>
-    </div>
-
- <div id="news" class="section section-card">
-    <h2>Latest News</h2>
-    <p><strong>Dec 29, 2024:</strong> The FLAP Token website received a major update, featuring enhanced design and new features!</p>
-    <p><strong>Oct 1, 2024:</strong> FLAP Game Bot beta testing begins with the Telegram community.</p>
-    <p><strong>Aug 15, 2024:</strong> Partnership with a leading NFT platform announced to enhance the FLAP ecosystem.</p>
-</div>
-
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 FLAP Token | <a href="https://t.me/FlapToken">Join Telegram</a></p>
+        <p>© 2024 FLAP Token</p>
     </footer>
 
     <script>
-        // JavaScript for Hamburger Menu Toggle
+        // Hamburger Menu Toggle
         const hamburger = document.querySelector('.hamburger');
         const navbar = document.querySelector('.navbar');
-
-        hamburger.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
+        hamburger.addEventListener('click', () => navbar.classList.toggle('active'));
     </script>
 </body>
 </html>
